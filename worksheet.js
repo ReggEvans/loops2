@@ -1,21 +1,75 @@
 // PART 0: Write a function called squareDance() that squares each number in an array.
 
+var squareDance = function(arr) {
+    var sqArray = []
+    for (var i = 0; i < arr.length; i++) {
+        var num = arr[i]
+        num *= num
+        sqArray.push(num)
+    }
+    return sqArray
+}
 
 // PART 1: write a function called nicer(). 
 // It should clean up the language in its input sentence. 
 // Forbidden words include heck, dang, crappy, and dang.
 
+var nicer = function(sentence) {
+    var newArray = sentence.split(" ")
+    var nicerArray = []
+    for (var i = 0; i < newArray.length; i++) {
+        var words = newArray[i]
+        if (words != "heck" && words != "dang" && words != "crappy" && words != "darn") {
+            nicerArray.push(words)
+        }
+    }
+    var niceSentence = nicerArray.join(" ")
+    return niceSentence
+}
 
 // // PART 2: write a function called capitalizeAll(). 
 // It should take as input a sentence and capitalize the first letter
 // of every word in the sentence. 
 
+var capitalize = function (str) {
+  return str.substring(0, 1).toUpperCase() + str.slice(1)
+};
+
+
+var capitalizeAll = function(sentence) {
+    var splitSentence = sentence.split(" ")
+    var capitalArray = []
+    for (var i = 0; i < splitSentence.length; i++) {
+        var words = splitSentence[i]
+        capitalArray.push(capitalize(words))
+	}
+    var capSentence = capitalArray.join(" ")
+	return capSentence
+}
+
 
 // // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
+
+var properSentences = function(improperSentence) {
+    var newSentence = improperSentence.split(". ")
+    var properArray = []
+    for (var i = 0; i < newSentence.length; i++) {
+        var fragments = newSentence[i]
+        fragments += "."
+        properArray.push(capitalize(fragments))
+    }
+    return properArray.join(" ").slice(0, -1)
+}
 
 
 // // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string. 
 
+var iPutTheFunIn = function(str) {
+    var newWord = ""
+    newWord = str.substring(0, str.length/2) + "fun" + str.substring(str.length/2)
+    return newWord
+    
+}
 
 // // HARD MODE
 
