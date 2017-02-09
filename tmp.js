@@ -98,6 +98,10 @@ var split = function(sen, del) {
 
 // // visit test.js to see the tests that will be run against your code.
 
+var pipeline = function(startVal, func1, func2) {
+    var result = (func1(func2(startVal)))
+    return result
+}
 
 console.log('********************************************************************************************************************************************')
 console.log('')
