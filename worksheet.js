@@ -12,7 +12,7 @@ var squareDance = function(arr) {
 
 // PART 1: write a function called nicer(). 
 // It should clean up the language in its input sentence. 
-// Forbidden words include heck, dang, crappy, and dang.
+// Forbidden words include heck, dang, crappy, and darn.
 
 var nicer = function(sentence) {
     var newArray = sentence.split(" ")
@@ -48,7 +48,10 @@ var capitalizeAll = function(sentence) {
 }
 
 
-// // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
+// // PART 3: write a function called properSentences(). It should take as input a 
+// // string and capitalize the first letter of every sentence in that string. 
+// // (For our purposes, all sentences will end with periods. Write one that works 
+// // with ? and ! and receive a gratifying high five, right on the hand!)
 
 var properSentences = function(sentence) {
     var splitSentence = sentence.split(". ")
