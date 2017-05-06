@@ -13,6 +13,7 @@ git clone https://github.com/ReggEvans/loops2.git
 cd loops2
 git remote remove origin
 npm install
+npm install -g mocha (you only need to do this once, ever)
 write answers in worksheet.js
 check work with **bash checkWork.sh** in terminal
 ```
